@@ -186,7 +186,7 @@ function joinNatural(a){if(a.length===1)return a[0];if(a.length===2)return a[0]+
 function genPrompt(){
   var out=document.getElementById('pg-out');
   if(!out) return;
-  var c=val('pg-company')||'[your company]';
+  var c=val('pg-company');
   var d=val('pg-display')||'[the information you want to show]';
   var fns=[].slice.call(document.querySelectorAll('.pg-fn:checked')).map(function(x){return x.value;});
   var o=val('pg-other'); if(o)fns.push(o);
@@ -195,7 +195,12 @@ function genPrompt(){
   var logoEl=document.getElementById('pg-logo');
   var logo=logoEl&&logoEl.checked?" I've also attached our company logo - please use it for branding.":"";
   var about=val('pg-about');
-  var intro=about?('I work for '+c+', '+about+', and I want to build an interactive dashboard.'):('I work for '+c+' and I want to build an interactive dashboard.');
+  var intro;
+  if(c){
+    intro=about?('I work for '+c+', '+about+', and I want to build an interactive dashboard.'):('I work for '+c+' and I want to build an interactive dashboard.');
+  }else{
+    intro='I want to build an interactive dashboard.';
+  }
   var t=intro+' Create an interactive site that displays '+d+' and lets me '+f+'. I\'ve attached '+a+' with all the underlying detail. Present the data in a way that\'s easy to navigate and digestible at a glance, while still preserving the full detail. Deliver the site as a single HTML file I can download and open directly in my browser, and name it "index.html".'+logo;
   out.textContent=t;
 }
