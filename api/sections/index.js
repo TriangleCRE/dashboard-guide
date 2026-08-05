@@ -1,6 +1,6 @@
 // GET  /api/sections  - list every section, in display order
 // POST /api/sections  - create a new section
-const { getPool, ensureSchema } = require('../_db');
+const { getPool, ensureReady } = require('../_db');
 
 const SELECT_COLUMNS =
   'slug, position, badge_class, badge_text, title_html, body_html, created_at, updated_at';
@@ -18,7 +18,7 @@ module.exports = async function handler(req, res) {
   let pool;
   try {
     pool = getPool();
-    await ensureSchema(pool);
+    await ensureReady(pool);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: err.message });
