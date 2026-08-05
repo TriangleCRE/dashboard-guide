@@ -1,0 +1,12 @@
+{
+  "name": "dashboard-guide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Internal playbook site, backed by Neon Postgres via Vercel serverless functions.",
+  "scripts": {
+    "migrate": "node scripts/migrate.js"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  }
+}
