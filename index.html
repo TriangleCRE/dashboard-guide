@@ -5,10 +5,12 @@ html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
 .layout{display:grid;grid-template-columns:288px 1fr;max-width:1360px;margin:0 auto}
 .sidebar{position:sticky;top:0;height:100vh;overflow-y:auto;padding:34px 20px 40px;border-right:1px solid var(--line);background:var(--bg)}
-.brand{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.brand{display:flex;align-items:center;gap:10px;margin-bottom:10px;text-decoration:none;color:inherit}
 .brand .dot{width:26px;height:26px;border-radius:7px;background:var(--accent);display:grid;place-items:center;color:#fff;flex:0 0 auto}
 .brand .dot svg{width:16px;height:16px}
 .brand b{font-size:15px;letter-spacing:.2px}
+.hub-home-btn{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--ink);text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:20px;padding:7px 13px;margin:0 0 16px;transition:.15s}
+.hub-home-btn:hover{border-color:var(--accent);color:var(--accent-ink)}
 .side-sub{font-size:12.5px;color:var(--muted);margin:0 0 18px}
 .side-prog{margin:0 0 20px}
 .prog-track{height:7px;background:#e9e7e1;border-radius:20px;overflow:hidden}
@@ -168,7 +170,7 @@ body.editing-mode .sec-add-wrap{display:block}
 .btn-add-section:hover{border-color:var(--accent);color:var(--accent-ink)}
 .save-toast{position:fixed;bottom:24px;right:24px;background:var(--ink);color:#fff;padding:11px 18px;border-radius:10px;font-size:13.5px;font-weight:600;box-shadow:var(--shadow);opacity:0;transform:translateY(8px);transition:.25s;pointer-events:none;z-index:60}
 .save-toast.show{opacity:1;transform:none}
-</style></head><body><button class="menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button><div class="backdrop" id="backdrop"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="brand"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span><b>Claude &rarr; Live Website</b></div><p class="side-sub">A step-by-step playbook for the team</p><nav><a href="#overview" class="nav-item" data-target="overview"><span class="nav-num">0</span><span>Overview</span></a>
+</style></head><body><button class="menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button><div class="backdrop" id="backdrop"></div><div class="layout"><aside class="sidebar" id="sidebar"><a class="brand" href="https://dashboard-hub-one-vert.vercel.app/" aria-label="Back to Dashboard Hub"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span><b>Claude &rarr; Live Website</b></a><a class="hub-home-btn" href="https://dashboard-hub-one-vert.vercel.app/">&#8962; Dashboard Hub</a><p class="side-sub">A step-by-step playbook for the team</p><nav><a href="#overview" class="nav-item" data-target="overview"><span class="nav-num">0</span><span>Overview</span></a>
 <a href="#glance" class="nav-item" data-target="glance"><span class="nav-num">·</span><span>How it works</span></a>
 <a href="#step1" class="nav-item" data-target="step1"><span class="nav-num">1</span><span>Build it in Claude</span></a>
 <a href="#step2" class="nav-item" data-target="step2"><span class="nav-num">2</span><span>Create a GitHub account</span></a>
