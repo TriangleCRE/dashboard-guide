@@ -115,6 +115,17 @@ input[type=checkbox]{width:17px;height:17px;accent-color:var(--accent);cursor:po
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
 .chip{font-size:13px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:6px 13px;color:#44433f}
 .chip b{color:var(--ink)}
+/* header home-button mockup */
+.hubmock{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fbfaf8;box-shadow:var(--shadow);margin:20px 0}
+.hubmock-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:16px 20px;background:#fff}
+.hubmock-brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:var(--ink)}
+.hubmock-logo{width:30px;height:30px;border-radius:8px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:800;flex:0 0 auto}
+.hubmock-brand small{display:block;font-size:11px;font-weight:500;color:var(--muted);margin-top:1px}
+.hubmock-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.hubmock-btn{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:20px;border:1px solid var(--line);background:#fff;color:var(--ink);white-space:nowrap}
+.hubmock-btn.new{border-color:var(--accent);color:var(--accent-ink);background:var(--accent-soft)}
+.hubmock-btn.primary{background:var(--green);border-color:var(--green);color:#fff}
+.hubmock-caption{padding:10px 14px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
 .caveats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
 .caveat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow)}
 .caveat .cx{color:var(--accent);font-weight:700;font-size:13px;margin-bottom:5px}
@@ -168,6 +179,7 @@ body.editing-mode .sec-add-wrap{display:block}
 <a href="#step7" class="nav-item" data-target="step7"><span class="nav-num">7</span><span>Connect to Claude Code</span></a>
 <a href="#step8" class="nav-item" data-target="step8"><span class="nav-num">8</span><span>Add a database</span></a>
 <a href="#step9" class="nav-item" data-target="step9"><span class="nav-num">9</span><span>Add a password</span></a>
+<a href="#step10" class="nav-item" data-target="step10"><span class="nav-num">10</span><span>Add a home button</span></a>
 <a href="#tips" class="nav-item" data-target="tips"><span class="nav-num">★</span><span>Tips &amp; reference</span></a></nav></aside><main class="main"><div class="hero"><span class="eyebrow">Internal Playbook</span><h1>Turn a Claude dashboard into a live, shareable, editable website</h1><p class="lede">Claude builds beautiful interactive dashboards, but on their own they're locked to your account and every edit spins off a new link. This guide walks through the GitHub&nbsp;+&nbsp;Vercel workflow that turns any Claude-built HTML file into a real website you can share by URL and keep editing through Claude Code.</p><button type="button" id="editModeBtn" class="edit-mode-btn">&#9998; Edit content</button></div><div id="sections-root" class="sections-root"><div class="sections-loading">Loading guide content&hellip;</div></div></main></div><script>
 var API_BASE='/api/sections';
 var sectionsData=[];
